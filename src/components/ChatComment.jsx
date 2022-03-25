@@ -147,14 +147,18 @@ function ChatComment(props) {
 
       <div className="comment-info">
         <div>
+
+          <div>
           <img
             alt=""
-            src={`https://avatars.dicebear.com/api/pixel-art/${uid.substring(
+            src={`https://avatars.dicebear.com/api/bottts/${uid.substring(
               0,
               5
             )}.svg?size=50&radius=50&backgroundColor=lightgray`}
           />
-          <p>{uid.substring(0, 5)}</p>
+          <p>{uid.substring(0, 6).toUpperCase()}</p>
+          </div>
+        
           <DeleteButton sent={commentClass} />
         </div>
 

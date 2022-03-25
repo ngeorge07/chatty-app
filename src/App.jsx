@@ -2,6 +2,7 @@ import "./App.scss";
 
 import { useState } from "react";
 import Attribution from "./components/Attribution";
+import Header from "./components/Header";
 import ChatComment from "./components/ChatComment";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -9,6 +10,7 @@ import "firebase/compat/auth";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import { signOut } from "firebase/auth";
 
 firebase.initializeApp({
   apiKey: "AIzaSyDUVjHHltBrNc4i9UcSbkS9F4kuOp9GIYo",
@@ -28,6 +30,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <main className="App">{user ? <CommentsSection /> : <SignIn />}</main>
       <Attribution />
     </>
@@ -104,7 +107,7 @@ function CommentsSection() {
         <form onSubmit={sendMessage}>
           <img
             alt=""
-            src={`https://avatars.dicebear.com/api/pixel-art/${uid.substring(
+            src={`https://avatars.dicebear.com/api/bottts/${uid.substring(
               0,
               5
             )}.svg?size=50&radius=50&backgroundColor=lightgray`}
@@ -120,11 +123,10 @@ function CommentsSection() {
             Send
           </button>
         </form>
-
-        <SignOut />
       </div>
     </>
   );
 }
 
+export { SignOut };
 export default App;
