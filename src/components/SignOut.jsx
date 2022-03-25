@@ -1,8 +1,4 @@
-import auth, {
-  createdTime,
-  firestore,
-  googleProvider,
-} from "../functions/createFirebase";
+import auth from "../functions/createFirebase";
 
 function SignOut() {
   return (
