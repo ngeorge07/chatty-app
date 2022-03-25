@@ -1,4 +1,4 @@
-import { SignOut } from "../App";
+import SignOut from "./SignOut";
 
 function Header() {
   return (

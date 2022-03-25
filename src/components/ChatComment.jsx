@@ -1,21 +1,6 @@
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
-import "firebase/compat/auth";
+import auth, { firestore } from "../functions/createFirebase";
 
 import { doc, updateDoc, deleteDoc } from "firebase/firestore";
-
-firebase.initializeApp({
-  apiKey: "AIzaSyDUVjHHltBrNc4i9UcSbkS9F4kuOp9GIYo",
-  authDomain: "comments-section-ccef3.firebaseapp.com",
-  projectId: "comments-section-ccef3",
-  storageBucket: "comments-section-ccef3.appspot.com",
-  messagingSenderId: "352784704241",
-  appId: "1:352784704241:web:8d85273c2ca1a467adff50",
-  measurementId: "G-SWYX3KY28E",
-});
-
-const firestore = firebase.firestore();
-const auth = firebase.auth();
 
 function ChatComment(props) {
   const { content, uid, customId } = props.comment;
@@ -147,18 +132,17 @@ function ChatComment(props) {
 
       <div className="comment-info">
         <div>
-
           <div>
-          <img
-            alt=""
-            src={`https://avatars.dicebear.com/api/bottts/${uid.substring(
-              0,
-              5
-            )}.svg?size=50&radius=50&backgroundColor=lightgray`}
-          />
-          <p>{uid.substring(0, 6).toUpperCase()}</p>
+            <img
+              alt=""
+              src={`https://avatars.dicebear.com/api/bottts/${uid.substring(
+                0,
+                5
+              )}.svg?size=50&radius=50&backgroundColor=lightgray`}
+            />
+            <p>{uid.substring(0, 6).toUpperCase()}</p>
           </div>
-        
+
           <DeleteButton sent={commentClass} />
         </div>
 
