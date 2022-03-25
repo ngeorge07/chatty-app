@@ -161,7 +161,8 @@ button:hover {
 
 form {
   height: 10vh;
-  bottom: 2vh;
+  position: fixed;
+  max-width: 800px;
 
   display: flex;
   align-items: center;

@@ -45,27 +45,25 @@ function CommentsSection() {
           ))}
       </div>
 
-      <div>
-        <form onSubmit={sendMessage}>
-          <img
-            alt=""
-            src={`https://avatars.dicebear.com/api/bottts/${uid.substring(
-              0,
-              5
-            )}.svg?size=50&radius=50&backgroundColor=lightgray`}
-          />
-          <input
-            type="text"
-            value={formValue}
-            onChange={(e) => setFormValue(e.target.value)}
-            placeholder="say something nice"
-          />
+      <form onSubmit={sendMessage}>
+        <img
+          alt=""
+          src={`https://avatars.dicebear.com/api/bottts/${uid.substring(
+            0,
+            5
+          )}.svg?size=50&radius=50&backgroundColor=lightgray`}
+        />
+        <input
+          type="text"
+          value={formValue}
+          onChange={(e) => setFormValue(e.target.value)}
+          placeholder="say something nice"
+        />
 
-          <button type="submit" disabled={!formValue}>
-            Send
-          </button>
-        </form>
-      </div>
+        <button type="submit" disabled={!formValue}>
+          Send
+        </button>
+      </form>
     </>
   );
 }
