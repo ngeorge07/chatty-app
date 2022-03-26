@@ -140,7 +140,7 @@ function ChatComment(props) {
                 5
               )}.svg?size=50&radius=50&backgroundColor=lightgray`}
             />
-            <p>{uid.substring(0, 6).toUpperCase()}</p>
+            <p>{uid.substring(0, 5).toUpperCase()}</p>
           </div>
 
           <DeleteButton sent={commentClass} />
