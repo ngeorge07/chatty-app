@@ -4,20 +4,32 @@ import { useState, useRef, useEffect } from "react";
 
 import ChatComment from "./ChatComment";
 
+// let size;
+
 function CommentsSection() {
   const commentsRef = firestore.collection("comments");
   const query = commentsRef.orderBy("createdAt").limitToLast(25);
-  const dummy = useRef();
 
   const [comments] = useCollectionData(query, { idField: "id" });
   const [formValue, setFormValue] = useState("");
   const { uid } = auth.currentUser;
 
   let counter;
+
+  const dummy = useRef();
+  const [size, increaseSize] = useState(0);
+
   const sendMessage = async (e) => {
     e.preventDefault();
 
     counter = 0;
+
+    // firestore
+    //   .collection("comments")
+    //   .get()
+    //   .then((snap) => {
+    //     size = snap.size; // will return the collection size
+    //   });
 
     const customId = firestore.collection("comments").doc().id;
     await commentsRef.doc(customId).set({
@@ -31,11 +43,12 @@ function CommentsSection() {
     });
 
     setFormValue("");
+    increaseSize(size + 1);
   };
 
   useEffect(() => {
     dummy.current.scrollIntoView({ behavior: "smooth" });
-  }, [comments]);
+  }, [size]);
 
   return (
     <>
