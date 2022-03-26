@@ -1,12 +1,13 @@
 import auth, { createdTime, firestore } from "../functions/createFirebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import ChatComment from "./ChatComment";
 
 function CommentsSection() {
   const commentsRef = firestore.collection("comments");
   const query = commentsRef.orderBy("createdAt").limitToLast(25);
+  const dummy = useRef();
 
   const [comments] = useCollectionData(query, { idField: "id" });
   const [formValue, setFormValue] = useState("");
@@ -32,6 +33,10 @@ function CommentsSection() {
     setFormValue("");
   };
 
+  useEffect(() => {
+    dummy.current.scrollIntoView({ behavior: "smooth" });
+  }, [comments]);
+
   return (
     <>
       <div className="comments">
@@ -43,6 +48,7 @@ function CommentsSection() {
               customId={msg.customId}
             />
           ))}
+        <span ref={dummy}></span>
       </div>
 
       <form onSubmit={sendMessage}>
