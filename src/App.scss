@@ -70,10 +70,6 @@ button:hover {
   background-color: #154faa;
 }
 
-.active {
-  background-color: none;
-}
-
 .comments {
   display: flex;
   flex-direction: column;
@@ -138,9 +134,13 @@ button:hover {
     border-radius: 4px;
   }
 
-  // button:hover {
-  //   background-color: #154faa;
-  // }
+  button:hover {
+    background-color: #154faa;
+  }
+
+  button.active {
+    background-color: none;
+  }
 
   path {
     fill: white;
