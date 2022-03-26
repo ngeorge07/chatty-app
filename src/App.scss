@@ -70,6 +70,10 @@ button:hover {
   background-color: #154faa;
 }
 
+.active {
+  background-color: none !important;
+}
+
 .comments {
   display: flex;
   flex-direction: column;
@@ -136,10 +140,6 @@ button:hover {
 
   button:hover {
     background-color: #154faa;
-  }
-
-  button:focus {
-    background-color: none;
   }
 
   path {
