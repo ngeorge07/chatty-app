@@ -74,6 +74,10 @@ button:hover {
   background: none;
 }
 
+button.active:hover {
+  background-color: #154faa;
+}
+
 .comments {
   display: flex;
   flex-direction: column;
@@ -138,9 +142,9 @@ button:hover {
     border-radius: 4px;
   }
 
-  button:hover {
-    background-color: #154faa;
-  }
+  // button:hover {
+  //   background-color: #154faa;
+  // }
 
   path {
     fill: white;
