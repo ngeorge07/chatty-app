@@ -1,7 +1,7 @@
 import "./App.scss";
 
 import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "./functions/createFirebase";
+import auth from "../functions/createFirebase";
 
 import Header from "./components/Header";
 import SignIn from "./components/SignIn";

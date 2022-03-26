@@ -1,4 +1,4 @@
-import auth, { googleProvider } from "../functions/createFirebase";
+import auth, { googleProvider } from "../../functions/createFirebase";
 
 function SignIn() {
   const signInWithGoogle = () => {

@@ -1,4 +1,4 @@
-import auth from "../functions/createFirebase";
+import auth from "../../functions/createFirebase";
 
 function SignOut() {
   return (

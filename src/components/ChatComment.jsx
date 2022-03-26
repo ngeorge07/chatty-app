@@ -1,4 +1,4 @@
-import auth, { firestore } from "../functions/createFirebase";
+import auth, { firestore } from "../../functions/createFirebase";
 
 import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 

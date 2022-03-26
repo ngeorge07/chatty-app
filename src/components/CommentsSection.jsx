@@ -1,4 +1,4 @@
-import auth, { createdTime, firestore } from "../functions/createFirebase";
+import auth, { createdTime, firestore } from "../../functions/createFirebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useState, useRef, useEffect } from "react";
 
