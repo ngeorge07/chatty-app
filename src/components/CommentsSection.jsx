@@ -24,13 +24,6 @@ function CommentsSection() {
 
     counter = 0;
 
-    // firestore
-    //   .collection("comments")
-    //   .get()
-    //   .then((snap) => {
-    //     size = snap.size; // will return the collection size
-    //   });
-
     const customId = firestore.collection("comments").doc().id;
     await commentsRef.doc(customId).set({
       content: formValue,
