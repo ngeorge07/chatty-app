@@ -172,11 +172,11 @@ form {
   gap: 1rem;
   width: 100%;
   background-color: #253b6f;
-  padding: 1.5rem;
+  padding: 2.5rem 1.5rem;
 
   input[type="text"] {
     width: 80%;
-    height: 2.8rem;
+    height: 2.5rem;
     font-size: 1.5rem;
     background-color: #7a90c4;
     border: none;
@@ -185,7 +185,7 @@ form {
   }
 
   button {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     font-size: 1rem;
     background-color: #378ae3;
