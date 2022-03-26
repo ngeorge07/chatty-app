@@ -74,8 +74,10 @@ button:hover {
   background: none;
 }
 
-button.active:hover {
-  background-color: #154faa;
+@media (hover: hover) {
+  button.active:hover {
+    background-color: #154faa;
+  }
 }
 
 .comments {
