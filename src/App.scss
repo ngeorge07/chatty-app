@@ -27,7 +27,7 @@ header {
   position: fixed;
   max-width: 800px;
   width: 100%;
-  height: 8vh;
+  min-height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
