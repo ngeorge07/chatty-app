@@ -2,9 +2,12 @@ function Attribution() {
   return (
     <footer className="attribution">
       <p>
-        Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
+        Inspired by{" "}
+        <a
+          href="https://fireship.io/lessons/react-firebase-chat-app-tutorial/"
+          target="_blank"
+        >
+          Fireship's tutorial
         </a>
         . Coded by <a href="#">George Nicolae</a>.
       </p>
